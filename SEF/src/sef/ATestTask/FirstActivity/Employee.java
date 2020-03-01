@@ -13,7 +13,6 @@ public class Employee extends Person {
         this.jobTitle = "Unknown";
         this.companyName = "Unknown";
         this.salary = 0;
-        System.out.println("I'm Employee constructor"); // Called when creating a Person instance
     }
 
     public Employee(int empId, String jobTitle, String companyName, double salary) {
@@ -25,7 +24,7 @@ public class Employee extends Person {
 
     //TODO 2 add getters and setters
     public int getempId() {
-        return getempId();
+        return empId;
     }
 
     public void setEmpId(int empId) {
@@ -48,7 +47,7 @@ public class Employee extends Person {
         this.companyName = companyName;
     }
 
-    public String getSalary() {
+    public double getSalary() {
         return salary;
     }
 
@@ -59,10 +58,21 @@ public class Employee extends Person {
 
     //TODO 3 override method announce()
     public String announce() {
-        return "I am " + getFirstName() + " " + getSecondName() + "and I am" + getAge() + "years old. My employee ID is: " + getempId() + ". I work as " + getJobTitle() + "in a company" + getCompanyName() + ". My salary is: "+getSalary();
+        return "I am " + getFirstName() + " " + getSecondName() + "and I am" + getAge() + "years old. My employee ID is: " + getempId() + ". I work as " + getJobTitle() + "in a company" + getCompanyName() + ". My salary is: " + getSalary();
 
     }
 
+    //for bubble sort
+    public int compareTo(sef.ATestTask.FirstActivity.Employee z) {
+        int res = 0;
+        if (salary < z.salary) {
+            res = -1;
+        }
+        if (salary > z.salary) {
+            res = 1;
+        }
+        return res;
+    }
 
 
 }

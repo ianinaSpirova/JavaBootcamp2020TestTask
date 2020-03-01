@@ -8,7 +8,6 @@ public class Student extends Person {
 
     public Student() {
         this.schoolName = "Unknown";
-        System.out.println("I'm Student constructor");
     }
 
     public Student(String schoolName) {
@@ -24,7 +23,10 @@ public class Student extends Person {
     }
 
     public String announce() {
-        return "I am " + getFirstName() + " " + getSecondName() + "and I am" + getAge() + "years old. I study in university" + getSchoolName() + ".";
+        return "I am " + getFirstName() + " " + getSecondName() + " and I am" + getAge() + "years old. I study in university" + getSchoolName() + ".";
 
+    }
+    public void introduce() {
+        System.out.println("I am " + getFirstName() + " " + getSecondName() + " and I am " + getAge() + " years old. I study in university " + getSchoolName() + ".");
     }
 }

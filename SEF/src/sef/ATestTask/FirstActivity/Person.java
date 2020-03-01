@@ -13,7 +13,6 @@ public class Person {
         this.firstName = "Unknown";
         this.secondName = "Unknown";
         this.age = 0;
-        System.out.println("I'm Person constructor");
     }
 
     //Behavior - parameterized constructor
@@ -52,10 +51,11 @@ public class Person {
 
     //TODO 2 add all person info into announce() method
     public String announce() {
-        return "I am " + getFirstName() + " " + getSecondName() + "and I am" + getAge() + "years old.";
+        return "I am " + getFirstName() + " " + getSecondName() + " and I am " + getAge() + " years old.";
     }
-    public String introduce() {
-        return "I am " + getFirstName() + " " + getSecondName() + "and I am" + getAge() + "years old.";
+
+    public void introduce() {
+        System.out.println("I am " + getFirstName() + " " + getSecondName() + " and I am " + getAge() + " years old.");
     }
 
 }

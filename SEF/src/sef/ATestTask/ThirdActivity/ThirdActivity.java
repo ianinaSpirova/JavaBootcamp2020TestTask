@@ -5,10 +5,10 @@ package sef.ATestTask.ThirdActivity;
 
 public class ThirdActivity {
 
-    public static void main(String[] args) throws CustomException {
+    public static void main(String[] args) /*throws CustomException*/ {
         ThirdActivity ta = new ThirdActivity();
         //TODO handle exception on proper way
-        ta.validateUser("Ivan");
+        /*ta.validateUser("Ivan");*/
         ta.catchExeption();
     }
 
@@ -24,19 +24,20 @@ public class ThirdActivity {
         }
     }
 
-    void validateUser(String name) throws CustomException {
+    void validateUser(String name) {
         String[] validUsers = {"John", "Mike", "Missi", "Peacy"};
         boolean flag = false;
         //TODO if name in a list -> set flag=true
         // if at the end flag=0 -> throw the exception
-        for (int i = 0; i < 4; i++) {
-            if (validUsers[i].equals(name)) {
-                flag = true;
-                break;
+        try {
+            for (int i = 0; i < 4; i++) {
+                if (validUsers[i].equals(name)) {
+                    flag = true;
+                    break;
+                }
             }
-            if (flag = 0) {
-                throw new CustomException();
-            }
+        } catch (Exception flagisfalse) {
+            System.out.println("Name is not on the list");
         }
     }
 
